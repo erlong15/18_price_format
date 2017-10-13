@@ -4,7 +4,6 @@ import argparse
 
 def get_thousands(int_value):
     thousands = []
-    i = 0
     while int_value:
         thousands.append(int(int_value % 1000))
         int_value = int_value // 1000
