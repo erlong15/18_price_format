@@ -1,7 +1,39 @@
-# Price Formatter
+# Форматирование цены
+Модуль форматирования цены для корректного отображения.
+Модуль предполагается как подключаемый.
+Имеется возможность консольного запуска
 
-[TODO. There will be project description]
+# Как подключить
 
-# Project Goals
+пример импорта и вызова модуля
+```
+from format_price import format_price
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+print(format_price(123456.12345))
+```
+Результат будет в виде
+```
+123 456.12
+```
+
+# Консольный запуск
+
+```
+python3 format_price.py 12345678.123450
+12 345 678.12
+```
+
+# Запуск тестов
+
+```
+python3 tests.py 
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+```
+
+# Цели проекта
+
+тестовый код для проекта - [DEVMAN.org](https://devman.org)
