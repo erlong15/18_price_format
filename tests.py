@@ -11,7 +11,8 @@ class FormattingPriceTestCase(unittest.TestCase):
     def test_format_price(self):
         test_price = 12345678.123450
         test_format = "12 345 678.12"
-        self.assertEqual(test_format, format_price(test_price))
+        error_output = "-"
+        self.assertEqual(test_format, format_price(test_price, error_output))
 
     def test_format_incorrect_price(self):
         bad_prices = [
@@ -21,7 +22,7 @@ class FormattingPriceTestCase(unittest.TestCase):
             ]
         test_format = 'Цена уточняется'
         for test_price in bad_prices:
-            self.assertEqual(test_format, format_price(test_price))
+            self.assertEqual(test_format, format_price(test_price, test_format))
 
 
 if __name__ == '__main__':
